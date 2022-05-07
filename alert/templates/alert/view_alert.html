@@ -1,0 +1,45 @@
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#<head>#}
+{#	<title></title>#}
+{#</head>#}
+{#<body>#}
+{% extends 'temp/authority_home.html' %}
+{% block base %}
+	<h1 align="center">VIEW ALERT</h1>
+    <div class="container">
+	<table class="table table-bordered">
+		<tr>
+			<td>Alert</td>
+            <td>Alert num</td>
+            <td>user name</td>
+            <td>phone number</td>
+            <td>device id</td>
+			<td>gas level</td>
+			<td>Latitude</td>
+			<td>Longitude</td>
+			<td>Date</td>
+			<td>Time</td>
+
+		</tr>
+{% for i in objavl %}
+		<tr>
+			<td>{{ i.alert }}</td>
+			<td>{{ i.alert_num }}</td>
+			<td>{{ i.user.user_name }}</td>
+			<td>{{ i.user.phone_no }}</td>
+            <td>{{ i.device_id }}</td>
+			<td>{{ i.gas_level }}</td>
+			<td>{{ i.latitude }}</td>
+            <td>{{ i.longitude }}</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+			<td><a href="https://www.google.com/maps/place/{{ i.latitude }},{{ i.longitude }}" target="_blank">TRACK LOCATION</a></td>
+		</tr>
+        {% endfor %}
+
+	</table>
+{% endblock %}
+</div>
+{#</body>#}
+{#</html>#}

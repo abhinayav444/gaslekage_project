@@ -1,0 +1,39 @@
+{% extends 'temp/mainhome.html' %}
+{% block login %}
+<form method="post">
+    {% csrf_token %}
+	<center>
+		<h1 align="center">REGISTRATION FORM</h1>
+		<table>
+			<tr>
+				<td>Branch Name</td>
+				<td><input type="text" name="branch_name" required></td>
+			</tr>
+			<tr>
+				<td>Branch Location</td>
+				<td><input type="text" name="branch_loc" required></td>
+			</tr>
+			<tr>
+				<td>Email ID</td>
+				<td><input type="email" name="authority_mail"  required></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="authority_password" required ></td>
+			</tr>
+			<tr>
+				<td>Helpline No.</td>
+				<td><input type="text" name="helpline_no" required></td>
+			</tr>
+			<tr>
+				<td align="center" colspan="2">
+					<input type="submit" value="Register" class="btn btn-primary">
+					<input type="submit"  value="Cancel" class="btn btn-primary">
+				</td>
+			</tr>
+		</table>
+	</center>
+    </form>
+{% endblock %}
+</body>
+</html>

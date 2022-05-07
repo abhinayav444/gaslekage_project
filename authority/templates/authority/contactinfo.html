@@ -1,0 +1,35 @@
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#<head>#}
+{#	<title></title>#}
+{#</head>#}
+{#<body>#}
+{% extends 'temp/authority_home.html' %}
+{% block base %}
+    <div class="container">
+<form method="post">
+    <h1 align="center">CONTACT INFO</h1>
+	<table class="table table-bordered">
+		<tr align="center">
+            <td><b>User</b></td>
+            <td><b>User Contact</b></td>
+            <td><b>Secondary User</b></td>
+            <td><b>Secondary Contact</b></td>
+			
+
+		</tr>
+{% for i in obbval %}
+		<tr align="center" >
+			<td>{{ i.user.user_name }} </td>
+			<td>{{ i.user.phone_no }} </td>
+            <td>{{ i.user_name }}</td>
+            <td>{{ i.phone_no }}</td>
+		</tr>
+{% endfor %}
+
+	</table>
+</form>
+    </div>
+{% endblock %}
+</body>
+</html>
